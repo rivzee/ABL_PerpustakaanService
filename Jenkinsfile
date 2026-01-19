@@ -8,11 +8,10 @@ pipeline {
         // Menggunakan Java bawaan dari Jenkins container (tidak perlu konfigurasi JDK terpisah)
     }
     
-    // 🔔 TRIGGER: Jenkins akan cek GitHub setiap 1 menit untuk perubahan
-    // Format: * * * * * = setiap 1 menit
-    // Tidak perlu ngrok atau webhook - Jenkins yang aktif cek GitHub
+    // 🔔 TRIGGER: Build LANGSUNG saat ada push ke GitHub (via Webhook)
+    // GitHub akan mengirim notifikasi ke Jenkins segera setelah push
     triggers {
-        pollSCM('* * * * *')
+        githubPush()
     }
     
     // 🌐 Environment Variables
