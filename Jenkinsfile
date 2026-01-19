@@ -6,8 +6,8 @@ pipeline {
     }
     
     tools {
-        maven 'Maven'
-        jdk 'JDK21'
+        maven 'MAVEN'
+        // JDK menggunakan bawaan dari Jenkins container
     }
     
     stages {
