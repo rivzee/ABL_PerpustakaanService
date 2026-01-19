@@ -42,10 +42,10 @@ public class BukuController {
         log.info("Request received", kv("action", "GET_BY_ID"), kv("id", id));
         BukuModel buku = bukuService.getBukuById(id);
         if (buku != null) {
-            log.info("Request completed", kv("action", "GET_BY_ID"), kv("status", "Sukses"), kv("id", id));
+            log.info("Request completed", kv("action", "GET_BY_ID"), kv("status", "SUCCESS"), kv("id", id));
             return ResponseEntity.ok(buku);
         } else {
-            log.warn("Request completed", kv("action", "GET_BY_ID"), kv("status", "Gagal"), kv("id", id));
+            log.warn("Request completed", kv("action", "GET_BY_ID"), kv("status", "FAILED"), kv("id", id));
             return ResponseEntity.notFound().build();
         }
     }
