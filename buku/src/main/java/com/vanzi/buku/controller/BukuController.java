@@ -37,7 +37,7 @@ public class BukuController {
     public List<BukuModel> getAllBuku() {
         log.info("Request received", kv("action", "GET_ALL"));
         List<BukuModel> result = bukuService.getAllBuku();
-        log.info("Request completed", kv("action", "GET_ALL"), kv("status", "SUKSES"), kv("count", result.size()));
+        log.info("Request completed", kv("action", "GET_ALL"), kv("status", "BERHASIL"), kv("count", result.size()));
         return result;
     }
 
