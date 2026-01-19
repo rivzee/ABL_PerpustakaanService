@@ -112,12 +112,16 @@ services:
     ports:
       - "8081:8081"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      SPRING_PROFILES_ACTIVE: docker,elk
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://server-eureka:8761/eureka/
       SPRING_RABBITMQ_HOST: rabbitmq
       SPRING_RABBITMQ_PORT: 5672
       SPRING_RABBITMQ_USERNAME: admin
       SPRING_RABBITMQ_PASSWORD: password
+      
+      # Logstash Configuration
+      LOGSTASH_HOST: logstash
+      LOGSTASH_PORT: 5000
       
       # H2 Database Configuration
       SPRING_DATASOURCE_URL: jdbc:h2:file:/app/data/anggota;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
@@ -155,12 +159,16 @@ services:
     ports:
       - "8082:8082"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      SPRING_PROFILES_ACTIVE: docker,elk
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://server-eureka:8761/eureka/
       SPRING_RABBITMQ_HOST: rabbitmq
       SPRING_RABBITMQ_PORT: 5672
       SPRING_RABBITMQ_USERNAME: admin
       SPRING_RABBITMQ_PASSWORD: password
+      
+      # Logstash Configuration
+      LOGSTASH_HOST: logstash
+      LOGSTASH_PORT: 5000
       
       # H2 Database Configuration
       SPRING_DATASOURCE_URL: jdbc:h2:file:/app/data/buku;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
@@ -198,12 +206,16 @@ services:
     ports:
       - "8083:8083"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      SPRING_PROFILES_ACTIVE: docker,elk
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://server-eureka:8761/eureka/
       SPRING_RABBITMQ_HOST: rabbitmq
       SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: admin
-      SPRING_RABBITMQ_PASSWORD: password
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+      
+      # Logstash Configuration
+      LOGSTASH_HOST: logstash
+      LOGSTASH_PORT: 5000
       
       # H2 Database Configuration
       SPRING_DATASOURCE_URL: jdbc:h2:file:/app/data/peminjaman;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
@@ -246,12 +258,16 @@ services:
     ports:
       - "8084:8084"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      SPRING_PROFILES_ACTIVE: docker,elk
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://server-eureka:8761/eureka/
       SPRING_RABBITMQ_HOST: rabbitmq
       SPRING_RABBITMQ_PORT: 5672
       SPRING_RABBITMQ_USERNAME: admin
       SPRING_RABBITMQ_PASSWORD: password
+      
+      # Logstash Configuration
+      LOGSTASH_HOST: logstash
+      LOGSTASH_PORT: 5000
       
       # H2 Database Configuration
       SPRING_DATASOURCE_URL: jdbc:h2:file:/app/data/pengembalian;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
@@ -295,7 +311,7 @@ services:
     ports:
       - "9000:9000"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      SPRING_PROFILES_ACTIVE: docker,elk
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://server-eureka:8761/eureka/
       SERVER_PORT: 9000
     depends_on:
