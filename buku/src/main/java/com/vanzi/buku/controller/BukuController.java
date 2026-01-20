@@ -72,7 +72,7 @@ public class BukuController {
         log.info("DATA CREATED - Buku baru ditambahkan", 
             kv("action", "CREATE"), 
             kv("eventType", "DATA_CHANGE"),
-            kv("status", "SUCCESS"), 
+            kv("status", "BERHASIL"), 
             kv("bukuId", result.getId()),
             kv("newData_judul", result.getJudul()),
             kv("newData_pengarang", result.getPengarang()),
