@@ -48,7 +48,7 @@ public class BukuController {
         if (buku != null) {
             log.info("Request completed", 
                 kv("action", "GET_BY_ID"), 
-                kv("status", "SUCCESS"), 
+                kv("status", "BERHASIL"), 
                 kv("bukuId", id),
                 kv("judul", buku.getJudul()),
                 kv("pengarang", buku.getPengarang()));

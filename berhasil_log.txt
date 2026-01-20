@@ -1,0 +1,21 @@
+﻿
+{"@timestamp":"2026-01-20T00
+:31:14.638+0000","@version":
+"1","message":"Request compl
+eted","logger_name":"com.van
+zi.buku.controller.BukuContr
+oller","thread_name":"http-n
+io-8082-exec-5","level":"INF
+O","level_value":20000,"serv
+iceName":"buku","traceId":"6
+96eccd2fd33475fb62bb42d623e0
+41a","spanId":"b62bb42d623e0
+41a","correlationId":"c2d199
+fb-9470-47f2-a474-125a6bc714
+0b","requestUri":"/api/buku"
+,"serviceName":"buku","httpM
+ethod":"GET","action":"GET_A
+LL","status":"BERHASIL","cou
+nt":0,"service":"buku"}
+
+
